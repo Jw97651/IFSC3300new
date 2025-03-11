@@ -1,68 +1,137 @@
+/* General Body Styling */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
+    font-family: 'Arial', Helvetica, sans-serif;
+    background-color: #f8f8f8; /* Soft light background */
     margin: 0 auto;
-    width: 670px;
-    border: 3px solid blue;
-    padding: 0 2em 1em;
+    width: 80%; /* Make the width more responsive */
+    max-width: 1200px; /* Set a max width for large screens */
+    border: 3px solid #007bff; /* Blue border */
+    padding: 2em;
+    box-sizing: border-box; /* Make sure padding doesn’t affect width */
     position: relative;
+    background-color: #ffffff;
+    border-radius: 10px; /* Rounded corners */
 }
 
+/* Heading Style */
 h1 {
-    color: blue;
+    color: #007bff; /* Blue color for header */
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
-
+/* Navigation Styling */
 nav {
     position: fixed;
-    right: 20px;
-    top: 20px;
-    width: 200px;
+    top: 50%; /* Center vertically */
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #ffffff; /* White background for navigation */
+    padding: 1em;
+    box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    border-radius: 8px;
+    width: 250px; /* Adjusted width */
+    max-height: 80vh; /* Set a max height for the nav */
+    overflow-y: auto; /* Enable scrolling when content exceeds the container height */
+    z-index: 10;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-nav ul li {
-    margin-bottom: 10px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: blue;
+/* Dropdown Button */
+.dropdown-btn {
+    font-size: 1.1em;
     font-weight: bold;
-    display: block;
-    padding: 10px;
+    color: #007bff;
+    background-color: white;
+    border: 2px solid transparent;
+    padding: 12px;
     border-radius: 5px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    text-align: right;
+    width: 100%;
 }
 
-nav ul li a:hover {
-    background-color: blue;
+.dropdown-btn:hover {
+    background-color: #007bff;
     color: white;
 }
 
-div {
-    margin-bottom: 1em;
+/* Dropdown Content (hidden by default) */
+.dropdown-content {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
 }
 
+.dropdown-content li {
+    margin-bottom: 12px; /* Space between items */
+}
+
+.dropdown-content li a {
+    text-decoration: none;
+    color: #007bff; /* Blue color */
+    font-weight: bold;
+    display: block;
+    padding: 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1.1em;
+    text-align: center; /* Center the text */
+    border: 2px solid transparent; /* Border for hover effect */
+}
+
+.dropdown-content li a:hover {
+    background-color: #007bff; /* Blue on hover */
+    color: white; /* White text on hover */
+    border-color: #007bff; /* Blue border on hover */
+}
+
+.dropdown-content li a:active {
+    background-color: #0056b3; /* Darker blue when clicked */
+}
+
+/* Show the dropdown content when clicked */
+.show {
+    display: block;
+}
+
+/* Styling for divs */
+div {
+    margin-bottom: 1.5em; /* Slightly more space between divs */
+}
+
+/* Label Styling */
 label {
     display: inline-block;
-    width: 11em;
+    width: 12em; /* Increase width slightly */
     text-align: right;
+    font-size: 1.1em; /* Slightly bigger font */
+    margin-bottom: 0.5em;
 }
 
+/* Input Styling */
 input {
+    padding: 10px;
     margin-left: 1em;
     margin-right: 0.5em;
+    border: 2px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Full width for responsiveness */
+    box-sizing: border-box; /* Avoid overflow */
+    transition: border-color 0.3s ease-in-out;
 }
 
+input:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Span Styling (for error messages) */
 span {
     color: red;
+    font-size: 0.9em;
 }
